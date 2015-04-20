@@ -8,9 +8,7 @@ class GoogleRadarPlaces(object):
     
     """ Class to pull places based on radar searchs """
     
-    def __init__(self, search_df, key,
-                 center = '38.907192,-77.036871', 
-                 rad = 30000):
+    def __init__(self, search_df, key, center, rad):
         
         """ 
         Inputs: 
