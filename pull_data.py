@@ -4,132 +4,165 @@ import requests
 # add api key
 from key import api_key
 
-# Calls
-def callRadar(df, key, loc = '38.907192,-77.036871', rad = 30000):
+class GoogleRadarPlaces(object):
     
-    """Loop through Radar Search on a df of categories
+    """ Class to pull places based on radar searchs """
     
-    Input: 
-        df should have the following columns:
-            id: user-assigned category id
-            type: type (per google's definitions)
-            cat: custom api category
-            cat_value: value of custom category
+    def __init__(self, search_df, key,
+                 center = '38.907192,-77.036871', 
+                 rad = 30000):
         
-        key: api_key
-        loc: lat-long of center
-        rad: radius of search in meters
+        """ 
+        Inputs: 
+            search_df: dataframe
+                    id: user-assigned category id
+                    type: type (per google's definitions)
+                    cat: custom api category
+                    cat_value: value of custom category
+            key: api key
+            center: lat, long of center
+            rad: how far search should extend (in meters)
+        """
+        
+        self.search_df = search_df
+        self.key = key
+        self.center = center
+        self.rad = rad
     
-    Output: dictionary where key = id and value = request output
-    """
-    
-    # set up api call
-    base_url = "https://maps.googleapis.com/maps/api/place/radarsearch/json"
-    
-    res = dict()
-    for index, row in df.iterrows():
-
-        # set up parameters
+    def call_radar(self, key, loc, rad, typ, cat, cat_value):
+        
+        """ Individual radar search
+        Input:
+            key: api key
+            loc: center locatin
+            rad: center radius
+            type: google catgory
+            cat: custom category
+            cat_value: custom category value
+        Output: api return
+        """
+        
+        base = "https://maps.googleapis.com/maps/api/place/radarsearch/json"
+        
         param = {
             "key" : key,
             "location" : loc,
             "radius" : rad,
-            "type" : row['type'],
-            row['cat'] : row['cat_value']
+            "type" : typ,
+            cat : cat_value
         }
         
-        # call
-        res[row['id']] = requests.get(base_url, params = param)
-        
-    return(res)
+        return(requests.get(base, params = param))
 
-def cleanRadar(df):
-    
-    """ Turns radar output into dict of dataframes. 
-    
-    Input: object from callRadar
-    
-    Output:
-        dict in which keys correspond to ids given to radar search
-        each entry is a dataframe:
+    def clean_radar(self, call_output):
+        """ Turns radar output into dataframe
+        
+        Input: 
+            call_output: output from _call_radar
+        Output: 
             place_id: google-assigned unique locator
+        """
+        
+        places = pd.DataFrame(call_output.json()['results'])
+        return(places['place_id'])
+    
+    def call_places(self, place_id, key):
+        """ Grab details for place_ids
+        Input: 
+            place_id: place_id
+            key: api_key
+        Output: API return
+        """
+        base = "https://maps.googleapis.com/maps/api/place/details/json"
+        param = {"key" : key,
+                 "placeid" : place_id}
+        res = requests.get(base, params = param)
+        return(res)
+        
+    def clean_places(self, places_out):
+        """ Turns place_id output into nice dataframes 
+    
+        Input: callID output
+        Output: dataframe
+            place_id: google place id
+            name: google's name of organization
             lat: latitude
             lng: longitude
-            cat_id: category id (from radar search)
-    """
+            address: formatted address
+            city: city
+            state: state """
     
-    # loop through each category
-    for k in df.keys():
+        df = places_out.json()['result']
         
-        # turn json to df
-        places = pd.DataFrame(df[k].json()['results'])
+        address = pd.DataFrame(df['address_components'])
         
-        # clean up geometry
-        places['lat'] = [x['location']['lat'] for x in places['geometry']]
-        places['lng'] =  [x['location']['lng'] for x in places['geometry']]
+        def _find_address(df):
+            """ takes in address frame and returns city and state"""
+            
+            res = {'city' : None, 'state' : None}
+            for index, row in df.iterrows():
+                
+                if 'locality' in row['types']:
+                    res['city'] = row['short_name']
+                elif 'administrative_area_level_2' in row['types']:
+                    res['city'] = row['short_name']
+                elif 'administrative_area_level_1' in row['types']:
+                    res['state'] = row['short_name']
+                    
+            return(res)
+            
+        res = {'name' : df['name'],
+        'lat' : df['geometry']['location']['lat'],
+        'lng' : df['geometry']['location']['lng'],
+        'address' : df['formatted_address']
+        }
         
-        # clean up dataframe
-        places = places[['place_id', 'lat', 'lng']]
-        places['cat_id'] = k
+        res.update(_find_address(address))
         
-        df[k] = places
-        
-    return(df)
-        
+        return(res)
 
-def callID(place_ids, key):
-    """ Grab details for place_ids
-    
-    input: 
-        place_ids: list of place_ids
-        key: api_key
         
-    output: dictionary where key = place_id and value = request output
-    """
-    
-    base_url = "https://maps.googleapis.com/maps/api/place/details/json"
-    param = {"key" : key}
-    
-    res = dict()
-    for pid in place_ids:
+    def run(self):
         
-        # add pid
-        param["placeid"] = pid
+        """ Loop through search_df and grab Radar results
         
-        res[pid] = requests.get(base_url, params = param)
-    
-    return(res)
-    
-def cleanID(df):
-    """ Turns place_id output into nice dataframes 
-    
-    Input: callID output
-    Output: dataframe
-        place_id: google place id
-        name: google's name of organization
-        lat: latitude
-        lng: longitude
-        address: formatted address
-        city: city
-        state: state """
-    
-    for i in 
-    
-    df = df['result']
-    # Name
-    df['name']
-    # Lat 
-    df['geometry']['location']['lat']
-    # Long
-    df['geometry']['location']['lng']
-    
-    # address
-    df['formatted_address']
-    # city
-    df['address_components'][2]['long_name']
-    # state
-    df['address_components'][3]['short_name']
-    # PlaceID
+        Output: dict {search_cat id, dataframe of places}"""
+        
+        res_tot = dict()
+        
+        for index, row in self.search_df.iterrows():
+            
+            print(row['id'])
+            # call radar search
+            r_output = self.call_radar(key = self.key, loc = self.center,
+                                       rad = self.rad,
+                                       typ = row['type'], cat = row['cat'],
+cat_value = row['cat_value'])
+
+            # clean radar search
+            r_output = self.clean_radar(r_output)
+            
+            # set up final list of places
+            pid_res_tot = []
+            
+            for pid in r_output:
+                
+                # Search and clean individaul search
+                pid_res = self.call_places(pid, self.key)
+                pid_res = self.clean_places(pid_res)
+                
+                # add id
+                pid_res['place_id'] = pid 
+                
+                # add to running list of places
+                pid_res_tot.append(pid_res)
+                
+            # turn places to df
+            pid_res_tot = pd.DataFrame(pid_res_tot)
+            
+            res_tot[row['id']] = pid_res_tot
+            
+        return(res_tot)
     
 if __name__ == "__main__":
     
@@ -137,14 +170,11 @@ if __name__ == "__main__":
     stores = pd.read_csv("types.csv")
     
     # get placeids and clean
-    res = callRadar(stores, api_key, 
-                    loc = '38.907192,-77.036871', rad = 30000)
-    res = cleanRadar(res)
+    g_setup = GoogleRadarPlaces(stores, api_key, 
+                              center = '38.907192,-77.036871',
+                              rad = 30000)
+    g_out = g_setup.run()
     
-    # get placeID
-    places = callID(res['place_id'], api_key)
-    
-    
-    
-    
+    for name in g_out.keys():
+        g_out[name].to_csv('places_' + name + '.csv')
     
