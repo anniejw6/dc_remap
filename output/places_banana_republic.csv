@@ -1,0 +1,59 @@
+,address,city,lat,lng,name,place_id,state
+0,"601 13th Street Northwest, Washington, DC 20005, United States",D.C.,38.897518,-77.029176,Banana Republic,ChIJUd4gHpe3t4kRI8gT70of2DM,DC
+1,"5430 Wisconsin Avenue, Chevy Chase, MD 20815, United States",Chevy Chase,38.962112,-77.086652,Banana Republic,ChIJoeIBv5DJt4kRpPFAG02oUqE,MD
+2,"1100 South Hayes Street, Arlington, VA 22202, United States",Arlington County,38.86387,-77.060462,Banana Republic,ChIJcT6Y-962t4kRBVGexVZLXTo,VA
+3,"628 King Street, Alexandria, VA 22314, United States",Alexandria,38.804836,-77.04676,Banana Republic,ChIJCXS8dviwt4kREYAPx_lu0ok,VA
+4,"3200 M Street Nw, Wisconsin/Georgetown, Washington, DC 20007, United States",Washington,38.904965,-77.063039,Banana Republic,ChIJc8ojRUm2t4kRgTPf-wUB-h4,DC
+5,"7937 Tysons Corner Center, McLean, VA 22102, United States",Fairfax County,38.917679,-77.221049,Banana Republic,ChIJTb0g5ehKtokRvhBItRgFNMM,VA
+6,"11901 Democracy Drive, Reston, VA 20190, United States",Reston,38.957631,-77.35768,Banana Republic,ChIJJ33HNx9ItokRxW7Q97Mmv9k,VA
+7,"11922U Fair Oaks Mall, Fair Oaks, Fairfax, VA 22033, United States",Fairfax,38.863076,-77.359502,Banana Republic,ChIJidNstkBPtokR41v_yWI6kEc,VA
+8,"7101 Democracy Boulevard, Bethesda, MD 20817, United States",Bethesda,39.024396,-77.146068,Banana Republic,ChIJRfvXJn7Mt4kRAbIoWlucn-M,MD
+9,"2700 Potomac Mills Cir, Potomac Mills, Woodbridge, VA 22192, United States",Woodbridge,38.644055,-77.292711,Banana Republic,ChIJ0fQlhwxWtokRolnivlKaM6Y,VA
+10,"Arundel Mills, 7000 Arundel Mills Circle, Hanover, MD 21076, United States",Hanover,39.157923,-76.724503,Banana Republic,ChIJ60bl8ubjt4kRBq8rPlLEXZI,MD
+11,"6800 Oxon Hill Rd, National Harbor, MD 20745, United States",National Harbor,38.794812,-77.00187,Banana Republic,ChIJ0V_s4YW6t4kRGrsL1fBo07s,MD
+12,"1961 Chain Bridge Road #105, McLean, VA 22102, United States",McLean,38.917949,-77.219429,Banana Republic Petites,ChIJ6wy0Q-hKtokRuFqw6Qu-Bhg,VA
+13,"Arundel Mills, 7000 Arundel Mills Circle, Hanover, MD 21076, United States",Hanover,39.157349,-76.724716,U.S. Polo Assn. Outlet,ChIJoz5bXubjt4kRwMu7Ry5A7JA,MD
+14,"7349 Wisconsin Avenue, Bethesda, MD 20814, United States",Bethesda,38.983301,-77.093314,Mustard Seed,ChIJM1XB4HrJt4kR-bQBqQpbBdc,MD
+15,"806 Upshur Street Northwest, Washington, DC 20011, United States",D.C.,38.941734,-77.023766,Fia's Fabulous Finds,ChIJOfPsOxLIt4kRM7Cd6kp3oSo,DC
+16,"5430 Wisconsin Avenue, Chevy Chase, MD 20815, United States",Chevy Chase,38.962139,-77.086631,Gap Kids,ChIJoeIBv5DJt4kRbYNQmyz6skE,MD
+17,"1100 South Hayes Street, Arlington, VA 22202, United States",Arlington,38.865005,-77.05965,Gap Kids,ChIJcT6Y-962t4kR3njyAFZCHW8,VA
+18,"11924 Market Street, Reston, VA 20190, United States",Reston,38.958915,-77.357489,GapKids,ChIJd8sNGB9ItokRX48nkgPNL5Y,VA
+19,"1120 Connecticut Avenue Northwest, Washington, DC 20036, United States",D.C.,38.904136,-77.040988,Gap,ChIJJ9E837i3t4kRf4n2FerhHfE,DC
+20,"3621 Jefferson Davis Highway, Alexandria, VA 22305, United States",Alexandria,38.837599,-77.049656,Old Navy,ChIJwVgQPNewt4kR8x1RoLJezdU,VA
+21,"622 King Street, Alexandria, VA 22314, United States",Alexandria,38.804818,-77.046675,Gap Outlet,ChIJQfQodPiwt4kRiFuNH8i57jI,VA
+22,"5800 Crossroads Ctr Way, Bldg B, Falls Church, VA 22041, United States",Falls Church,38.854227,-77.130595,Old Navy,ChIJm1n2SIqzt4kRK8knzEPOrNg,VA
+23,"3500 East West Hwy, Hyattsville, MD 20782, United States",Hyattsville,38.968302,-76.959432,Old Navy,ChIJ3fEUAhCmsYkRbDdODIoUbvE,MD
+24,"3235 M Street Northwest, Washington, DC 20007, United States",D.C.,38.905377,-77.064025,AllSaints,ChIJmVx7Pkm2t4kRCj1rnW5l3kQ,DC
+25,"5430 Wisconsin Avenue, Chevy Chase, MD 20815, United States",Chevy Chase,38.962131,-77.086614,Gap,ChIJtXDjvpDJt4kRQJcXP0fyCJM,MD
+26,"3229 M. Street, Washington, DC 20007, United States",D.C.,38.905275,-77.063792,Athleta,ChIJ_0whOUm2t4kR6gPfCB-dEdM,DC
+27,"1100 South Hayes Street, Arlington, VA 22202, United States",Arlington County,38.862446,-77.061302,Gap,ChIJcT6Y-962t4kRhy_f7JtWsI0,VA
+28,"7906LA Tyson'S Corner Center, McLean, VA 22102, United States",McLean,38.933759,-77.177281,Gap,ChIJTb0g5ehKtokRAeiuXXUtDuE,VA
+29,"4800 Indian Head Highway, Oxon Hill, MD 20745, United States",,38.821461,-77.000039,Indian Head Highway Thrift,ChIJC7A-NA26t4kRbIpQlnhDYmw,MD
+30,"12017 Rockville Pike, Rockville, MD 20852, United States",Rockville,39.054395,-77.116164,Old Navy,ChIJO73PNTDMt4kR5xJdIZcm9jQ,MD
+31,"1258 Wisconsin Avenue Northwest, Washington, DC 20007, United States",D.C.,38.906677,-77.063169,Gap,ChIJTw_hd0m2t4kRY-xqlYlzxpM,DC
+32,"7101 Democracy Boulevard, Bethesda, MD 20817, United States",Montgomery County,39.02534,-77.146774,Old Navy,ChIJRfvXJn7Mt4kRXYzfr5i2sKk,MD
+33,"2nd St NE, Silver Spring, MD 20903, United States",Silver Spring,38.999073,-76.994605,A Community Thrift Store,ChIJkVqZyw7Gt4kRIbtfw6k4i4E,MD
+34,"1530 U Street Northwest, Washington, DC 20009, United States",D.C.,38.916859,-77.035768,Joint Custody,ChIJh760Ld23t4kRPvD0vgHoSgI,DC
+35,"7101 Democracy Boulevard, Bethesda, MD 20817, United States",Bethesda,39.023481,-77.145921,GapKids,ChIJRfvXJn7Mt4kRqRpflU_-98A,MD
+36,"3115 Sherwood Hall Lane, Alexandria, VA 22306, United States",Alexandria,38.742165,-77.083915,Thrift Store of Virginia,ChIJWfu442uut4kRiMJ8TdQBjnU,VA
+37,"1100 South Hayes Street, Arlington, VA 22202, United States",Arlington,38.862554,-77.060929,babyGap,ChIJcT6Y-962t4kRg-ce0VIlHsI,VA
+38,"1961 Chain Bridge Road, McLean, VA 22102, United States",McLean,38.917902,-77.218488,Old Navy,ChIJ6-_lu-9KtokR9WWSTg38cLo,VA
+39,"7906 Tysons Corner Center, McLean, VA 22102, United States",McLean,38.918081,-77.219966,Baby Gap,ChIJTb0g5ehKtokRdfNqNdu8le0,VA
+40,"12209 Fair Lakes Promenade Drive, Fairfax, VA 22033, United States",Fairfax,38.859105,-77.367904,Old Navy,ChIJmUsrr2dPtokR7e6ZO2_kr5w,VA
+41,"7101 Democracy Boulevard, Bethesda, MD 20817, United States",Bethesda,39.023572,-77.145993,Gap,ChIJX4Q-kn_Mt4kRpcHLPQRMldk,MD
+42,"6711 Frontier Drive, Springfield, VA 22150, United States",Springfield,38.77171,-77.170005,Old Navy,ChIJg3f3Wmett4kRo_qWSdG2Zbw,VA
+43,"1629 Washington Plaza North, Reston, VA 20190, United States",Reston,38.968837,-77.340528,Small Change Consignments,ChIJYy9gr9E3tokRz3L4_WEh93M,VA
+44,"1258 Wisconsin Avenue Northwest, Washington, DC 20007, United States",D.C.,38.9066,-77.06325,GapKids,ChIJjV0geEm2t4kRMC2KCA5maRs,DC
+45,"2250 Petrie Lane, Suite 532, Lanham, MD 20706, United States",Lanham,38.921345,-76.847781,Old Navy,ChIJkfRGicLBt4kRmbQWanmmJYw,MD
+46,"2700 Potomac Mills Circle, Woodbridge, VA 22192, United States",Woodbridge,38.644076,-77.292638,Gap Outlet,ChIJ0fQlhwxWtokRQp6q1ZfeUiM,VA
+47,"7906 Tysons Corner Center, McLean, VA 22102, United States",McLean,38.918094,-77.220103,GapBody,ChIJdwchnly1t4kR1hiZkaVK6ls,VA
+48,"289 Muddy Branch Road, Gaithersburg, MD 20878, United States",Gaithersburg,39.12863,-77.207902,Tina's Consignment Shop Inc,ChIJm8cDu0cttokRliq4-3GsHs0,MD
+49,"7000 Arundel Mills Cir, Hanover, MD 21076, United States",Hanover,39.15549,-76.724191,Old Navy,ChIJ60bl8ubjt4kR6mo5y57phVE,MD
+50,"11900 Market Street, Reston, VA 20190, United States",Reston,38.958491,-77.35756,Athleta,ChIJxb4LGB9ItokROHLTqfDYJ_k,VA
+51,"7000 Arundel Mills Cir, Hanover, MD 21076, United States",Hanover,39.157679,-76.724966,Gap Outlet,ChIJ60bl8ubjt4kRPhD4IZ5lfNA,MD
+52,"11930U Fair Oaks Mall, Fairfax, VA 22033, United States",Fairfax,38.864612,-77.357296,babyGap,ChIJUy9htkBPtokRH0C6nl-Mj74,VA
+53,"8034 Tysons Corner Center, McLean, VA 22102, United States",Fairfax County,38.917446,-77.223402,Athleta,ChIJ61lZFVu1t4kR-icyrkAsVrM,VA
+54,"11750-U Fair Oaks Mall, Fairfax, VA 22033, United States",Fairfax,38.863194,-77.358984,Gap,ChIJNeIGdEBPtokRZbdGV0XQ8YI,VA
+55,"3166 Mount Pleasant Street Northwest, Washington, DC 20010, United States",D.C.,38.930412,-77.038255,Amani DC,ChIJISufOyHIt4kRBGUgR3GRon0,DC
+56,"5335 Wisconsin Avenue NW, Washington, DC 20015, United States",D.C.,38.960497,-77.084761,Old Navy,ChIJD5Cq15bJt4kRK0Igqf5oilw,DC
+57,"Fair Oaks Mall, 11750 Fair Oaks Mall, Fairfax, VA 22033, United States",Fairfax,38.862922,-77.358864,GapMaternity,ChIJUy9htkBPtokRbccsKoNfaGE,VA
