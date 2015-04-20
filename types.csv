@@ -1,6 +1,6 @@
 id,type,cat,cat_value
 loft,clothing_store,keyword,loft
-ann_taylor,clothing_store,keyword,ann%20taylor
+ann_taylor,clothing_store,keyword,ann taylor
 walgreen,convenience_store,keyword,walgreen
 cvs,convenience_store,name,cvs
-banana_republic,clothing_store,keyword,banana%20republic
+banana_republic,clothing_store,keyword,banana
